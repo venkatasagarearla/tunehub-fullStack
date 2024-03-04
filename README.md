@@ -1,1 +1,1 @@
-Tune-hub full stack projrct
+Tune-hub full stack project
