@@ -31,6 +31,11 @@ public class NavController
 		return "addsongs";
 	}
 	
+	@GetMapping("/map-songs")
+	public String song()	
+	{
+		return "addsongs";
+	}
 	
 	
 	
