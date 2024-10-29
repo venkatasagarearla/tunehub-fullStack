@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html>
 <head>
     <meta charset="UTF-8">
@@ -42,3 +43,66 @@
 </div>
 </body>
 </html>
+=======
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="Register.css" />
+  </head>
+  <body>
+    <div class="container">
+        <h2>Register to start Listening</h2>
+      <form action="/register" method="post" class="text-center">
+       <div class="user-details">
+        <label
+          >User Name: </label>
+          <input type="text" name="username" class="form-control" required
+        />
+
+        <label
+          >Email ID: </label>
+          <input type="email" name="email" class="form-control" required
+        />
+
+        <label
+          >Password:
+          </label>
+          <input type="password" name="password" class="form-control" required
+        />
+       </div>
+        
+        
+        <div class="gender-options">
+            <label
+            >Gender:</label>
+            <label><input type="radio" name="gender" value="male"  required class="inline"/>Male</label>
+           <label> <input type="radio" name="gender" value="female"  class="inline"/>Female</label>
+            <label><input type="radio" name="gender" value="other" class="inline"/>Others</label>
+          
+        </div>
+        
+
+          <div class="account-type">
+            <label
+            >Role:</label>
+            <label><input type="radio" name="role" value="admin"  required class="inline"/> Admin</label>
+            <label
+              ><input type="radio" name="role" value="customer" class="inline" /> Customer</label
+            >
+          </label>
+          </div>
+        <label id="address"
+          >Address: <textarea name="address" class="form-control"></textarea>
+        </label>
+
+        <input type="submit" value="REGISTER" class="btn" />
+        <p>Already have an account? <a href="#">Login here</a></p>
+
+      </form>
+    </div>
+  </body>
+</html>
+
+>>>>>>> cc4a2f8 (changes in docker file  and users controller)

@@ -23,12 +23,21 @@ $(document).ready(function() {
     });
 });
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cc4a2f8 (changes in docker file  and users controller)
 function createOrder() {
     $.post("/createOrder")
         .done(function(order) {
             order = JSON.parse(order);
             var options = {
+<<<<<<< HEAD
                 "key": "rzp_test_RuvNyMOTiCwMPs",
+=======
+                "key": "rzp_test_kkIuv3znRnhdkO",
+>>>>>>> cc4a2f8 (changes in docker file  and users controller)
                 "amount": order.amount_due.toString(),
                 "currency": "INR",
                 "name": "Tune Hub",
@@ -39,8 +48,13 @@ function createOrder() {
                 },
                 "prefill": {
                     "name": "Your Name",
+<<<<<<< HEAD
                     "email": "earlavenkatasagar@gmail.com",
                     "contact": "8790712483"
+=======
+                    "email": "test@example.com",
+                    "contact": "9999999999"
+>>>>>>> cc4a2f8 (changes in docker file  and users controller)
                 },
                 "notes": {
                     "address": "Your Address"

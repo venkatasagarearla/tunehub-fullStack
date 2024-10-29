@@ -84,6 +84,23 @@ public class UsersController
 				return "payment";
 			}
 	}
+//<<<<<<< HEAD
+//=======
+//	@GetMapping("/signout")
+//	public String customerLogOut(HttpSession session) {
+//		if(session!=null) {
+//			session.invalidate();
+//		}
+//		return "index" ;
+//	}
+//	@GetMapping("/admin-logout")
+//	public String adminLogOut(HttpSession session) {
+//		if(session!=null) {
+//			session.invalidate();
+//		}
+//		return "index" ;
+//	}
+//>>>>>>> cc4a2f8 (changes in docker file  and users controller)
 }
 
 

@@ -1,0 +1,23 @@
+table {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid  black; 
+    text-align: left;
+    padding: 8px;
+    color: red;
+}
+
+th {
+    background-color: #1b1b32; 
+    color: white;
+}
+
+audio {
+    width: 100%;
+    max-width: 250px;
+}
