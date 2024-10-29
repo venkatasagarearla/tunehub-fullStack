@@ -38,6 +38,10 @@ public class UsersController
 		{
 			return "login";
 		}
+
+
+		
+
 	}
 
 	@PostMapping("/login")
@@ -84,6 +88,22 @@ public class UsersController
 				return "payment";
 			}
 	}
+
+	@GetMapping("/signout")
+	public String customerLogOut(HttpSession session) {
+		if(session!=null) {
+			session.invalidate();
+		}
+		return "index" ;
+	}
+	@GetMapping("/admin-logout")
+	public String adminLogOut(HttpSession session) {
+		if(session!=null) {
+			session.invalidate();
+		}
+		return "index" ;
+	}
+
 }
 
 

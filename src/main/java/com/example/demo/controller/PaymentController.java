@@ -27,8 +27,11 @@ public class PaymentController {
 	public String createOrder() {
 		Order order = null;
 		try {
-			RazorpayClient razorpay = new RazorpayClient("rzp_test_RuvNyMOTiCwMPs", 
-					"oW4Yq6NPcpPemcb04EZ2xXCn");
+
+
+			RazorpayClient razorpay = new RazorpayClient("rzp_test_kkIuv3znRnhdkO", 
+					"hjKit9zk3fBLBt3gZP2E0rI8");
+
 
 			JSONObject orderRequest = new JSONObject();
 			orderRequest.put("amount",50000);
@@ -40,28 +43,48 @@ public class PaymentController {
 
 		
 			order = razorpay.orders.create(orderRequest);
+
 		}
+		
 		catch(Exception e) {
+			e.printStackTrace();
+
 			System.out.println("exception while crteating order");
 		}
 		return order.toString();
 	}
 	
+
+	// new keyId rzp_test_kkIuv3znRnhdkO
+// new key seceret hjKit9zk3fBLBt3gZP2E0rI8
+// old	rzp_test_XmwnchQOeOtvgY
+//old secert 0BqRP7065kuUDvV6ZaimqRSa
+
+
 	@PostMapping("/verify")
 	@ResponseBody
 	public boolean verifyPayment(@RequestParam  String orderId, @RequestParam String paymentId,
 											@RequestParam String signature) {
 	    try {
 	        // Initialize Razorpay client with your API key and secret
+
+	        
+
+	    	System.out.println("control is comming to verify ");
 	        @SuppressWarnings("unused")
-			RazorpayClient razorpayClient = new RazorpayClient("rzp_test_RuvNyMOTiCwMPs", 
-	        								"oW4Yq6NPcpPemcb04EZ2xXCn");
+			RazorpayClient razorpayClient = new RazorpayClient("rzp_test_kkIuv3znRnhdkO", 
+	        								"hjKit9zk3fBLBt3gZP2E0rI8");
+
 	        // Create a signature verification data string
 	        String verificationData = orderId + "|" + paymentId;
 
 	        // Use Razorpay's utility function to verify the signature
-	        boolean isValidSignature = Utils.verifySignature(verificationData, signature, 
-	        													"oW4Yq6NPcpPemcb04EZ2xXCn");
+	        boolean isValidSignature = Utils.verifySignature(verificationData, signature, "hjKit9zk3fBLBt3gZP2E0rI8");
+
+	        			
+
+	        													
+
 
 	        return isValidSignature;
 	    } catch (RazorpayException e) {

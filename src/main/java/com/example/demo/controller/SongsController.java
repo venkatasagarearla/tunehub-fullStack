@@ -8,15 +8,21 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 
 import com.example.demo.entities.Songs;
 import com.example.demo.services.SongsService;
 
 
+
 @RestController
 @RequestMapping("/songscontroller")
+
+@Controller
+
 public class SongsController {
 	@Autowired
 	SongsService songserv;
@@ -41,12 +47,14 @@ public class SongsController {
 		model.addAttribute("songslist", songslist);
 		return "displaysongs";
 	}
+
 	@GetMapping("/viewmysongs")
 	public List<Songs> getAllSongs(){
 		List<Songs> songslist = songserv.fetchAllSongs();
 		return songslist;
 		
 	}
+
 
 	@GetMapping("/viewsongs")
 	public String viewCustomerSongs(Model model) {

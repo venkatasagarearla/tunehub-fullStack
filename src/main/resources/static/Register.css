@@ -1,0 +1,74 @@
+h2{
+    text-align: center;
+    margin: 1em auto;
+   color: #ffffff;
+  }
+  
+ textarea{
+    display: block;
+ }
+ label{
+    margin: 0.5em auto;
+   
+ }
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+ 
+    font-family: Tahoma;
+    font-size: 16px;
+    
+    background-color: #0a0a23;
+   
+}
+
+.account-type{
+    margin: 0.7em 0;
+   
+ }
+ .gender-options{
+    margin: 0.7em 0;
+ }
+ .user-details label{
+    display: block;
+    margin:0.3em o;
+   
+  
+  }
+form{
+    margin:0 auto;
+    max-width:550px;
+    min-width:300px; 
+    width: 60vw;
+  
+   color: #ffffff;
+    
+    background-color: #1b1b32;
+    
+  
+}input,textarea{
+    width: 95%;
+    margin: 10px 0 0 0;
+  min-height: 2em;
+  border-radius: 5px;
+background-color: #ffffff;
+color: #121212;
+   
+}
+.inline{
+    width:unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+}
+input[type="submit"]{
+    display:block;
+    width:60%;
+    margin:1em auto;
+    font-size: 1.1em;
+    min-width:300px;
+    color: #121212;
+    background-color: green;
+}
